@@ -32,6 +32,10 @@ public class KmsUI {
         this.frame.add(panel);
         this.frame.setVisible(true);
 
+        //Screenshot
+        screenShot screenshot = new screenShot();
+        screenshot.run();
+
 
 
     }

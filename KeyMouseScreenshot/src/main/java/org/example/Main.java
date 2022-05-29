@@ -12,7 +12,5 @@ public class Main {
     public static void main(String[] args) {
         KmsUI kmsUI = new KmsUI();
         kmsUI.initUserInterface();
-        //kmStrokes keyStrokes = new kmStrokes();
-        //screenShot sample = new screenShot();
     }
 }
