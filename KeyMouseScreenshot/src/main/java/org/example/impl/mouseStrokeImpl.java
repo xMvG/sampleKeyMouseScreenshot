@@ -25,7 +25,7 @@ public class mouseStrokeImpl implements MouseListener {
     public void mousePressed(MouseEvent e) {
         if(e.getID() == MouseEvent.MOUSE_PRESSED){
             mouseCount++;
-            keymouseStroke.getMouseStrokelbl().setText("MouseStroke: " + mouseCount);
+            keymouseStroke.getMouseStrokelbl().setText("Mouse Stroke: " + mouseCount);
 
         }
 

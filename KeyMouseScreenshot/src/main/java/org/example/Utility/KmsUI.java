@@ -4,6 +4,7 @@ import org.example.impl.keyStrokeImpl;
 import org.example.impl.mouseStrokeImpl;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseListener;
 
@@ -14,7 +15,7 @@ public class KmsUI {
     private JLabel mouseStrokelbl;
     private JPanel panel;
 
-    public void initUserInterface() {
+    public void initUserInterface() throws AWTException {
         this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         this.frame.setFocusable(true);
@@ -23,9 +24,11 @@ public class KmsUI {
         this.panel = new JPanel();
         this.panel.add(keyStrokelbl);
         this.panel.add(mouseStrokelbl);
+
         keyMouseStroke keymouseStroke = initLabels();
         KeyListener keyListener = new keyStrokeImpl(keymouseStroke);
         MouseListener mouseListener = new mouseStrokeImpl(keymouseStroke);
+
         this.frame.addKeyListener(keyListener);
         this.frame.addMouseListener(mouseListener);
 
