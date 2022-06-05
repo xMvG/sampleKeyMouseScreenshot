@@ -1,12 +1,11 @@
 package org.example.Utility;
 
-import com.mysql.cj.protocol.a.authentication.MysqlNativePasswordPlugin;
+//import com.mysql.cj.protocol.a.authentication.MysqlNativePasswordPlugin;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
 public class JDBCUtil {
     private String URL;
     private String user;
@@ -23,6 +22,7 @@ public class JDBCUtil {
     public Connection getConnection() {
         //get the connection
         try {
+            Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(URL, user, password);
         } catch (SQLException ex) {
             System.out.println("Error getting connection: " + ex.getMessage());
